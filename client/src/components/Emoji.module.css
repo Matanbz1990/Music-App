@@ -1,0 +1,27 @@
+.emojis {
+  display: flex;
+  justify-content: space-between;
+}
+.emoji {
+  font-size: 24px;
+  margin: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 5px;
+}
+.duration {
+  font-size: 18px;
+  margin: auto;
+  margin-left: 10px;
+  border: 1px solid;
+  padding: 5px;
+}
+.emoji:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.isLiked {
+  background-color: rgb(253, 253, 253);
+  color: black;
+}

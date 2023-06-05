@@ -1,0 +1,19 @@
+.play {
+  font-size: 30px;
+}
+.play:hover {
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  cursor: pointer;
+}
+.audio {
+  margin: auto 0;
+}
+.pause {
+  font-size: 30px;
+}
+.pause:hover {
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+}

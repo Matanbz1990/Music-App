@@ -1,0 +1,16 @@
+.item {
+  border: solid 1px;
+  padding: 1px 3px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+}
+.item:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.options {
+  background-color: rgb(39, 39, 39);
+  transition: transform 1s ease;
+  transform: translateY(5px);
+}

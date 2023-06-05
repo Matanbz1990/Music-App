@@ -1,0 +1,26 @@
+.text {
+  text-align: center;
+  width: 60%;
+  margin: auto;
+  font-weight: 300;
+}
+
+.text h4 {
+  font-weight: 300;
+  font-size: large;
+}
+.text h1 {
+  font-weight: 300;
+}
+.link {
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 20px;
+  margin-left: 5px;
+  font-weight: 600;
+}
+.links {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}

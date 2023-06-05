@@ -1,0 +1,21 @@
+.fileUpload {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 5px;
+  border: solid 1px white;
+}
+.fileUpload button:hover {
+  background-color: rgb(206, 199, 199);
+  cursor: pointer;
+}
+.fileContainer h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.loadingText {
+  color: red;
+}
+.fileUpload h3 {
+  margin-right: 5px;
+}

@@ -1,0 +1,16 @@
+.contactText {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  width: 70%;
+  margin: auto;
+}
+.contactText h2 {
+  margin: 4rem;
+  font-weight: 200;
+}
+
+.link {
+  text-decoration: none;
+  color: aliceblue;
+}

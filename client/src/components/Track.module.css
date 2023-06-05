@@ -1,0 +1,87 @@
+.trackDetailes {
+  border: black 1px solid;
+  display: flex;
+  background-color: #130e0e;
+
+  justify-content: space-evenly;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  width: 95%;
+  max-height: 6rem;
+  color: white;
+  box-shadow: 0 1px 5px rgb(50, 50, 50);
+
+  margin: 20px;
+}
+
+.outerTrackClass {
+  width: 95%;
+}
+.isPlayingClass {
+  /* background-image: url("https://www.transparenttextures.com/patterns/argyle.png"); */
+  background-color: #3a0808;
+
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+.trackEmojis {
+  /* flex: 3; */
+}
+
+.songAndArtist {
+  margin-top: auto;
+  text-align: left;
+}
+.songAndArtist h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.titleAndDuration {
+  display: flex;
+  align-items: baseline;
+  color: white;
+}
+
+.titleAndDuration h3 {
+  margin-right: 10px;
+  color: white;
+}
+.songAndArtist p {
+  margin-top: 0;
+}
+.geners {
+  margin: 0;
+}
+.geners p {
+  font-size: small;
+}
+.moods {
+  margin: 0;
+}
+.moods p {
+  font-size: small;
+  max-height: 5rem;
+}
+
+.item {
+  border: solid 1px;
+  padding: 1px 3px;
+  margin-top: 5px;
+  margin-bottom: 1px;
+}
+.item:hover {
+  color: black;
+  background-color: white;
+  cursor: pointer;
+}
+.trackImg {
+  /* margin: 0; */
+  margin-top: auto;
+  width: 6rem;
+  height: 6rem;
+}
+img:hover {
+}
+.open {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}

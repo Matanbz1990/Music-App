@@ -1,0 +1,51 @@
+.upload {
+  text-align: center;
+  border: solid black 1px;
+  width: 60%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+}
+.upload button {
+  height: 2rem;
+  width: 6rem;
+  margin-top: 10px;
+  font-weight: 500;
+}
+textarea {
+  width: 80%;
+}
+
+.upload button:hover {
+  background-color: rgb(223, 223, 223);
+  cursor: pointer;
+}
+
+.upload button:disabled {
+  background-color: rgb(95, 95, 95);
+}
+
+.InputLabel {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+input {
+  width: 50%;
+  height: 1.2rem;
+}
+
+.disabledMessage {
+  color: red;
+}
+.uploadFiles {
+  display: flex;
+}
+.arrays {
+  display: flex;
+  justify-content: space-between;
+}

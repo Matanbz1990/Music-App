@@ -1,0 +1,20 @@
+.showButton {
+  margin: 20px;
+  text-align: center;
+}
+
+.Container1 {
+  /* display: flex; */
+}
+.Container2 {
+  display: flex;
+}
+.element1 {
+  /* flex: 0 0 30%; */
+}
+.element2 {
+  /* flex: 0 0 70%; */
+}
+.CurrentPlayedAudio {
+  flex: 0 0 70%;
+}

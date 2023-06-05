@@ -1,0 +1,33 @@
+.scrollable {
+  width: 70%;
+  color: rgb(0, 0, 0);
+  background-color: #b6b6b6;
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  border-top: solid 2px rgb(241, 239, 239);
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 30rem;
+}
+.scrollable::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background-color: #cecece;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+.scrollableH3 {
+  margin: auto;
+  margin-top: auto;
+}

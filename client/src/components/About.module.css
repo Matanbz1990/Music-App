@@ -1,0 +1,14 @@
+.aboutText {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  width: 60%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 30px;
+}
+.aboutText p {
+  font-size: larger;
+  margin: 0 3rem;
+  font-weight: 300;
+}

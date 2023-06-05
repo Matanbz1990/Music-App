@@ -1,0 +1,29 @@
+.filters {
+  display: flex;
+  color: aliceblue;
+  margin: auto;
+  padding-top: 20px;
+  text-align: center;
+  list-style-type: none;
+  justify-content: center;
+  align-items: baseline;
+}
+.filter {
+  margin-right: 5px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+}
+.filtersTitle {
+  margin-right: 5px;
+  font-size: large;
+}
+.filterIcon {
+  font-size: medium;
+}
+.filterIcon:hover {
+  color: black;
+  background-color: white;
+  border-radius: 100%;
+  cursor: pointer;
+}

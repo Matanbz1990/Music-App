@@ -1,0 +1,17 @@
+.musicContainer1 {
+  background-color: #000000;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  color: rgb(255, 255, 255);
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  box-shadow: 0 1px 5px rgb(50, 50, 50);
+  border: solid 1px white;
+  /* max-height: 6rem; */
+}
+.textH2 h2 {
+  padding-top: 40px;
+}
+.musicContainer2 {
+  display: flex;
+}

@@ -17,3 +17,20 @@
   color: rgb(243, 213, 221);
   padding-bottom: 20px;
 }
+
+@media (max-width: 600px) {
+  /* .nowPlayingText {
+    width: 90%;
+  } */
+
+  .nowPlaying h3 {
+    font-size: medium;
+  }
+
+  .nowPlaying p {
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    font-size: medium;
+  }
+}

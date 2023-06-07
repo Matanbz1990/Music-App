@@ -1,12 +1,12 @@
 const express = require("express");
 const path = require("path");
-const { default: mongoose } = require("mongoose");
 const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 require("dotenv/config");
 app.use(cors({ origin: true }));
 
+const { default: mongoose } = require("mongoose");
 mongoose.connect(process.env.DB_STRING, { useNewUrlParser: true });
 mongoose.connection
   .once("open", () => {
@@ -38,6 +38,9 @@ app.get("/about", (req, res) => {
   console.log("about page");
   res.sendFile(path.join(__dirname, filepath));
 });
+
+
+
 app.post("/verifyToken", (req, res) => {
   const { userId } = req.body;
 

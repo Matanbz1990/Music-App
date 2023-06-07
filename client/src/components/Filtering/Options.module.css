@@ -10,7 +10,16 @@
   cursor: pointer;
 }
 .options {
-  background-color: rgb(39, 39, 39);
+  background-color: rgb(0, 0, 0);
   transition: transform 1s ease;
   transform: translateY(5px);
+}
+@media (max-width: 600px) {
+  .item {
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    padding: auto;
+    margin-top: 10px;
+  }
 }

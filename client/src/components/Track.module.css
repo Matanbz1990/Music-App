@@ -5,7 +5,7 @@
 
   justify-content: space-evenly;
   background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
-  width: 95%;
+  width: 100%;
   max-height: 6rem;
   color: white;
   box-shadow: 0 1px 5px rgb(50, 50, 50);
@@ -19,7 +19,7 @@
 .isPlayingClass {
   /* background-image: url("https://www.transparenttextures.com/patterns/argyle.png"); */
   background-color: #3a0808;
-
+  width: 100%;
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
@@ -84,4 +84,46 @@ img:hover {
 .open {
   opacity: 1;
   transition: opacity 0.5s ease;
+}
+.trackClasses1 {
+  display: flex;
+}
+.trackClasses2 {
+  display: flex;
+}
+@media (max-width: 600px) {
+  .trackDetailes {
+    display: block;
+    max-height: 12rem;
+    margin-left: 5px;
+  }
+  .duration {
+    margin: auto;
+    text-align: center;
+  }
+  .title {
+    margin: auto;
+    text-align: center;
+  }
+  .titleAndDuration {
+    display: block;
+  }
+  .trackImg {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 0;
+  }
+  .trackClasses1 {
+    display: flex;
+    margin-bottom: 0;
+  }
+  .trackClasses2 {
+    display: flex;
+    margin-bottom: 0;
+  }
+
+  .item {
+    font-size: x-small;
+    margin-top: 0;
+  }
 }

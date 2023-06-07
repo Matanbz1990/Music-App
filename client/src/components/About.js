@@ -10,7 +10,7 @@ export default function About() {
     <div>
       <h1>About Matan </h1>
       <div className={classes.aboutText}>
-        <img alt="img3" src={img3} height="400" cl />
+        <img alt="img3" src={img3} height="400" cl className={classes.img1} />
         <p className={classes.aboutTextP}>
           Matan Ben Zahav is a versatile musician, composer, and
           multi-instrumentalist hailing from Israel. With a passion for creating
@@ -40,10 +40,23 @@ export default function About() {
           strong foundation in music theory, composition techniques, and
           pedagogy.
         </p>
-        <img alt="img1" src={img1} width="500" height="300" />
+        <img
+          alt="img1"
+          src={img1}
+          width="500"
+          height="300"
+          className={classes.img2}
+        />
       </div>
       <div className={classes.aboutText}>
-        <img alt="Acl11 " src={Acl11} width="700" height="500" cl />
+        <img
+          alt="Acl11 "
+          src={Acl11}
+          width="700"
+          height="500"
+          cl
+          className={classes.img3}
+        />
         <p>
           <h3>International Recognition:</h3> In 2019, Matan proudly represented
           Israel at the ASL Music Festival in Taipei, Taiwan. His remarkable
@@ -65,7 +78,13 @@ export default function About() {
           ability to merge his musical creativity with technical expertise
           allows him to create innovative digital experiences for his audience.
         </p>
-        <img alt="img1" src={Matan3} width="500" height="300" />
+        <img
+          alt="img1"
+          src={Matan3}
+          width="500"
+          height="300"
+          className={classes.img4}
+        />
       </div>
     </div>
   );

@@ -12,3 +12,18 @@
   margin: 0 3rem;
   font-weight: 300;
 }
+@media (max-width: 600px) {
+  .aboutText {
+    width: 100%;
+    display: block;
+  }
+  .aboutText p {
+    font-size: medium;
+  }
+  .aboutText img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin: 10px;
+  }
+}

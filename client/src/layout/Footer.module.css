@@ -4,3 +4,9 @@ footer {
   width: 100%;
   position: fixed;
 }
+@media (max-width: 600px) {
+  footer {
+    /* position: absolute; */
+    position: static;
+  }
+}

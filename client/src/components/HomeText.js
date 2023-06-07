@@ -5,7 +5,9 @@ import { Link } from "react-router-dom";
 export default function HomeText() {
   return (
     <div className={classes.text}>
-      <h1>Welcome to the music website of Matan Ben Zahav</h1>
+      <h1>Welcome to the website of </h1>
+      <h1>Matan Ben Zahav </h1>
+
       <h4>
         here you can find all Matan's Music and everything about Matan's music
       </h4>

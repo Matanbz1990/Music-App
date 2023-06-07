@@ -31,3 +31,8 @@
   margin: auto;
   margin-top: auto;
 }
+@media (max-width: 600px) {
+  .scrollable {
+    width: 100%;
+  }
+}

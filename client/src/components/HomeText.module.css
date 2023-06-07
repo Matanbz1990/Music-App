@@ -24,3 +24,11 @@
   justify-content: space-around;
   text-decoration: none;
 }
+@media (max-width: 600px) {
+  .text {
+    width: 75%;
+  }
+  .text h1 {
+    font-size: large;
+  }
+}

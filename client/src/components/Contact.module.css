@@ -14,3 +14,19 @@
   text-decoration: none;
   color: aliceblue;
 }
+
+@media (max-width: 600px) {
+  .contactText {
+    display: block;
+  }
+  .contactText img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin: 10px;
+  }
+  .contactText h2 {
+    font-size: large;
+    width: 100%;
+  }
+}

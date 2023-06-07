@@ -13,12 +13,12 @@ export default function Header() {
   const audioCtx = useContext(AudioContext);
   const { logout, currentUser } = useContext(AuthContext);
 
-  const imgStyle = {
-    width: "50px",
-    height: "50px",
-    margin: "auto",
-    marginLeft: "5px",
-  };
+  // const imgStyle = {
+  //   width: "50px",
+  //   height: "50px",
+  //   margin: "auto",
+  //   marginLeft: "5px",
+  // };
 
   const handleShowUpload = () => {
     isShowUpload(!showUpload);
@@ -26,14 +26,14 @@ export default function Header() {
   return (
     <div className={classes.header}>
       <div className={classes.titleAndLinks}>
-        <img
-          alt="profileImage"
-          src={profileImage}
-          width="50"
-          height="50"
-          className={classes.headerImg}
-        />
         <Link to={"/"} className={classes.navLink}>
+          <img
+            alt="profileImage"
+            src={profileImage}
+            width="50"
+            height="50"
+            className={classes.headerImg}
+          />
           <h3>Matan Music</h3>
         </Link>
         <div className={classes.links}>
@@ -47,20 +47,26 @@ export default function Header() {
       </div>
       {audioCtx.isPlaying && (
         <div className={classes.nowPlayingTitle}>
-          <h3 className={classes.nowPlayingHeaderText}>Now playing</h3>:
-          <img alt="non" src={audioCtx.trackImgUrl} style={imgStyle} />
-          <h1 className={classes.nowPlayingHeaderTitle}>
-            "{audioCtx.trackTitle}"
-          </h1>
+          <h3 className={classes.nowPlayingHeaderText}>Now playing:</h3>
+          <div className={classes.nowPlayingHalfText}>
+            <img
+              alt="non"
+              src={audioCtx.trackImgUrl}
+              className={classes.trackImg}
+              // style={imgStyle}
+            />
+            <h1 className={classes.nowPlayingHeaderTitle}>
+              "{audioCtx.trackTitle}"
+            </h1>
+          </div>
           <h3 className={classes.nowPlayingHeaderText}>
             by {audioCtx.trackArtist}
           </h3>
-          <div></div>
         </div>
       )}
 
       {!currentUser && (
-        <div>
+        <div className={classes.adminButton}>
           <Link to="/login">
             <Button>Admin Sign-in</Button>
           </Link>

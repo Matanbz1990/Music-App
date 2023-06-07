@@ -13,7 +13,9 @@ export default function Filters(props) {
   return (
     <div>
       <ul className={classes.filters}>
-        <li className={classes.filtersTitle}>Filters:</li>
+        {props.filtersOptions.length > 0 && (
+          <li className={classes.filtersTitle}>Filters:</li>
+        )}
         {props.filtersOptions.map((filter) => (
           <li key={filter} className={classes.filter}>
             {filter}{" "}

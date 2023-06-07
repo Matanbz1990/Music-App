@@ -15,3 +15,8 @@
 .musicContainer2 {
   display: flex;
 }
+@media (max-width: 600px) {
+  .musicContainer2 {
+    display: block;
+  }
+}

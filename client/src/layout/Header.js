@@ -6,6 +6,7 @@ import profileImage from "../assets/images/Profile.png";
 import { AuthContext } from "../store/AuthProvider";
 import UploadTrack from "../components/UploadTrack";
 import { AudioContext } from "../store/AudioProvider";
+import { PauseCircleOutlined } from "@ant-design/icons";
 
 import classes from "./Header.module.css";
 export default function Header() {
@@ -23,6 +24,11 @@ export default function Header() {
   const handleShowUpload = () => {
     isShowUpload(!showUpload);
   };
+
+  const pauseSound = () => {
+    audioCtx.pauseAudio();
+  };
+
   return (
     <div className={classes.header}>
       <div className={classes.titleAndLinks}>
@@ -59,9 +65,17 @@ export default function Header() {
               "{audioCtx.trackTitle}"
             </h1>
           </div>
-          <h3 className={classes.nowPlayingHeaderText}>
-            by {audioCtx.trackArtist}
-          </h3>
+          <div className={classes.artistAndPause}>
+            <h3 className={classes.nowPlayingHeaderText}>
+              by {audioCtx.trackArtist}
+            </h3>
+
+            <PauseCircleOutlined
+              style={{ fontSize: "150%", marginLeft: "20px" }}
+              className={classes.pauseIt}
+              onClick={pauseSound}
+            />
+          </div>
         </div>
       )}
 

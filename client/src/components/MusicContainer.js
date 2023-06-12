@@ -12,8 +12,26 @@ export default function MusicContainer() {
   // console.log(allTracks);
   const [filteredTracks, setFilteredTracks] = useState(allTracks);
 
+  //order tracks-firstly "Inspiration"
+  // Sorting the tracks array
+  const sortedTracks = [...allTracks].sort((trackA, trackB) => {
+    if (
+      trackA.albums.includes("Inspirations") &&
+      !trackB.albums.includes("Inspirations")
+    ) {
+      return -1; // Move track a before track b
+    } else if (
+      !trackA.albums.includes("Inspirations") &&
+      trackB.albums.includes("Inspirations")
+    ) {
+      return 1; // Move track b before track a
+    } else {
+      return 0; // Preserve the order of the tracks within their respective groups
+    }
+  });
+
   useEffect(() => {
-    const filtered = allTracks.filter((track) => {
+    const filtered = sortedTracks.filter((track) => {
       if (filtersOptions.length === 0) {
         // If no filters selected, display all tracks
         return true;

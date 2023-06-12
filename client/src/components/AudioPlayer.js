@@ -21,6 +21,7 @@ function AudioPlayer(props) {
     <div className={classes.audio}>
       {!isPlaying && (
         <PlayCircleOutlined
+          // style={{ margin: "0" }}
           className={classes.play}
           onClick={() => {
             playSound(url);

@@ -1,13 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import classes from "./FilterOption.module.css";
 import Options from "./Options";
-export default function FilterOption(props) {
-  const [moodsIsHovered, setMoodsIsHovered] = useState(false);
-  const [genresIsHovered, setGenresIsHovered] = useState(false);
-  const [instrumentsIsHovered, setInstrumentsIsHovered] = useState(false);
-  const [albumsIsHovered, setAlbumsIsHovered] = useState(false);
 
-  const genres = ["Rock", "Pop", "World Music", "Jazz", "Classical", "Ambiant"];
+export default function FilterOption(props) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [showComponent, setShowComponent] = useState(false);
+
+  // useEffect(()=>{},[])
+
+  useEffect(() => {
+    let timeout;
+    if (isHovered) {
+      timeout = setTimeout(() => {
+        setShowComponent(true);
+      }, 350);
+    } else {
+      setShowComponent(false);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [isHovered]);
+  const genres = ["Rock", "Pop", "World Music", "Jazz", "Classical", "Ambient"];
   const instruments = [
     "Piano",
     "Guitar",
@@ -26,40 +39,45 @@ export default function FilterOption(props) {
   ];
   const albums = ["Pianissimo", "Inspirations"];
 
-  const changeFilterState = () => {
-    if (props.option === "Mood") {
-      setMoodsIsHovered(!moodsIsHovered);
-    }
-    if (props.option === "Genre") {
-      setGenresIsHovered(!genresIsHovered);
-    }
-    if (props.option === "Instrument") {
-      setInstrumentsIsHovered(!instrumentsIsHovered);
-    }
-    if (props.option === "Album") {
-      setAlbumsIsHovered(!albumsIsHovered);
-    }
+  const openFilterState = () => {
+    setIsHovered(true);
   };
+  const closeFilterState = () => {
+    setIsHovered(false);
+  };
+  const changeFilterState = () => {
+    setIsHovered(!isHovered);
+  };
+
   return (
-    <div onMouseEnter={changeFilterState} onMouseLeave={changeFilterState}>
-      <div onClick={changeFilterState} className={classes.optionButton}>
+    <div
+      onClick={changeFilterState}
+      onMouseEnter={openFilterState}
+      onMouseLeave={closeFilterState}
+    >
+      <div className={classes.optionButton}>
         <h2>{props.option}</h2>
       </div>
-      <div
-        className={`${classes.sidebar} ${
-          moodsIsHovered ||
-          genresIsHovered ||
-          instrumentsIsHovered ||
-          albumsIsHovered
-            ? classes.openSidebar
-            : ""
-        }`}
-      >
-        {moodsIsHovered && <Options options={moods} />}
-        {genresIsHovered && <Options options={genres} />}
-        {instrumentsIsHovered && <Options options={instruments} />}
-        {albumsIsHovered && <Options options={albums} />}
-      </div>
+      {isHovered && (
+        <div
+          className={`${classes.sidebar} ${
+            showComponent ? classes.openSidebar : ""
+          }`}
+        >
+          {showComponent && (
+            <>
+              {props.option === "Mood" && (
+                <Options options={moods} setShowComponent={setShowComponent} />
+              )}
+              {props.option === "Genre" && <Options options={genres} />}
+              {props.option === "Instrument" && (
+                <Options options={instruments} />
+              )}
+              {props.option === "Album" && <Options options={albums} />}
+            </>
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -11,6 +11,10 @@
   text-decoration: none;
   color: aliceblue;
   /* flex: 1; */
+  transition: all 0.5s ease;
+}
+.navLink:hover {
+  color: rgb(208, 229, 247);
 }
 .headerImg {
   margin-right: 20px;
@@ -26,6 +30,10 @@
   text-decoration: none;
   color: aliceblue;
   margin: 20px;
+  transition: all 0.5s ease;
+}
+.link:hover {
+  color: rgb(208, 229, 247);
 }
 
 .links {
@@ -54,6 +62,15 @@
   overflow: hidden;
   font-weight: 300;
 }
+
+.pauseIt {
+  /* width: 20rem; */
+  font-size: 30px;
+}
+.pauseIt :hover {
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+}
 .nowPlayingHalfText {
   display: flex;
   align-items: baseline;
@@ -66,7 +83,10 @@
   margin-left: 5px;
   font-weight: 300;
 }
-
+.artistAndPause {
+  display: flex;
+  align-items: baseline;
+}
 .nowPlayingTitle img {
   width: 100px;
 }
@@ -103,9 +123,16 @@
 @media (max-width: 600px) {
   .header {
     display: block;
+    /* height: 14rem; */
   }
   .titleAndLinks {
     display: block;
+  }
+  .pauseIt {
+    /* width: 20rem; */
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
   }
   .links {
     font-size: large;

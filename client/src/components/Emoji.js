@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import {
-  DownloadOutlined,
   StarOutlined,
   ShareAltOutlined,
   DeleteOutlined,
@@ -64,13 +63,21 @@ export default function Emoji(props) {
       });
   };
 
-  const downloadTrack = () => {};
-
+  const onShareClicked = async () => {
+    try {
+      await navigator.share({
+        title: props.title,
+        url: window.location.href,
+      });
+      console.log("Page shared successfully");
+    } catch (error) {
+      console.error("Error sharing page:", error);
+    }
+  };
   return (
     <div className={classes.emojis}>
-      <DownloadOutlined className={classes.emoji} onClick={downloadTrack} />
       <StarOutlined className={likedClasses} onClick={onLikedChange} />
-      <ShareAltOutlined className={classes.emoji} />
+      <ShareAltOutlined className={classes.emoji} onClick={onShareClicked} />
       {currentUser && (
         <div className={classes.emojis}>
           <DeleteOutlined className={classes.emoji} onClick={deleteTrack} />

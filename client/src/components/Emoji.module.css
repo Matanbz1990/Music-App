@@ -1,13 +1,14 @@
 .emojis {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-around; */
 }
 .emoji {
   font-size: 24px;
   margin: auto;
-  margin-left: 10px;
+  margin-top: 20px;
   border: 1px solid;
   padding: 5px;
+  transition: all 0.5s ease;
 }
 .duration {
   font-size: 18px;
@@ -25,9 +26,8 @@
   background-color: rgb(253, 253, 253);
   color: black;
 }
+.emoji {
+  margin-left: 10px;
+}
 @media (max-width: 600px) {
-  .emoji {
-    font-size: 20px;
-    margin-left: 15px;
-  }
 }

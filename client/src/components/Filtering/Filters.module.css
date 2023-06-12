@@ -27,3 +27,15 @@
   border-radius: 100%;
   cursor: pointer;
 }
+@media (max-width: 600px) {
+  .filter {
+    font-size: medium;
+    border: 0.5px solid white;
+  }
+  .filtersTitle {
+    font-size: medium;
+  }
+  .filters {
+    padding-top: 4px;
+  }
+}

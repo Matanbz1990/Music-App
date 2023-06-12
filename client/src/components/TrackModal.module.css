@@ -1,0 +1,105 @@
+.backAndTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.title {
+  text-align: center;
+  margin: auto;
+}
+.play {
+  font-size: 30px;
+  transition: all 0.5s ease;
+  margin: 0 20px;
+  text-decoration: none;
+  color: aliceblue;
+}
+.play:hover {
+  color: rgb(187, 206, 228);
+  /* background-color: white; */
+  border-radius: 100%;
+  cursor: pointer;
+}
+.pause {
+  margin: 0 20px;
+
+  font-size: 30px;
+  transition: all 0.5s ease; /* Add transition property */
+}
+.pause:hover {
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+}
+.titleAndAudio {
+  display: flex;
+  align-items: center;
+}
+.info {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 300;
+}
+.artist {
+  font-size: x-large;
+}
+.duration {
+  font-size: x-large;
+}
+/* .trackEmojis {
+  margin-top: 200px;
+} */
+.moreInfo {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 300;
+  font-size: large;
+}
+.ChatGPT {
+  width: 30%;
+}
+.ChatGPTText {
+  font-size: larger;
+}
+.attribute {
+  margin-left: 20px;
+}
+.titleAndArtist {
+  display: flex;
+}
+
+.link {
+  text-decoration: none;
+  color: aliceblue;
+  margin: 20px;
+  transition: all 0.5s ease;
+  font-size: larger;
+  margin-left: 100px;
+}
+.link:hover {
+  color: rgb(187, 206, 228);
+}
+.trackEmojis {
+  width: 50%;
+  margin: auto;
+}
+@media (max-width: 600px) {
+  .backAndTitle {
+    display: block;
+    width: 100%;
+  }
+  .link {
+    margin: 100px;
+    margin-bottom: 20px;
+  }
+  .info {
+    display: block;
+    text-align: center;
+  }
+  .ChatGPT {
+    width: 100%;
+  }
+  .moreInfo {
+    display: block;
+    text-align: center;
+  }
+}

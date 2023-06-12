@@ -1,16 +1,21 @@
 .optionButton {
   background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
   background-color: black;
-  transition: background-color 1s ease;
+  transition: color 0.3s ease 1s;
 }
 .optionButton:hover {
   cursor: pointer;
-  color: rgb(199, 195, 195);
+  color: rgb(212, 217, 221);
   transition: transform 1s ease;
 }
 .sidebar {
   transition: transform 1s ease;
 }
 .openSidebar {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
+}
+@media (max-width: 600px) {
+  .optionButton {
+    font-size: small;
+  }
 }

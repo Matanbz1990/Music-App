@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Track.module.css";
-
 import Emoji from "./Emoji";
 import AudioPlayer from "./AudioPlayer";
-import CurrentPlayedData from "./CurrentPlayedData";
+import { Link } from "react-router-dom";
+
 export default function Track(props) {
   const trackClasses = `${classes.trackDetailes} ${
     props.isPlaying ? classes.isPlayingClass : ""
@@ -12,7 +12,7 @@ export default function Track(props) {
   const imgBackground = {
     backgroundImage: `url(${track.imgUrl})`,
     backgroundSize: "auto",
-    width: "95%",
+    width: "90%",
     margin: "auto",
     marginTop: "10px",
     // border: "solid black 1px",
@@ -22,7 +22,7 @@ export default function Track(props) {
       <div className={trackClasses}>
         <div className={classes.trackClasses1}>
           {track.imgUrl && (
-            <div>
+            <Link to={`/modal/${track._id}`} className={classes.link}>
               <img
                 alt="non"
                 src={track.imgUrl}
@@ -30,7 +30,7 @@ export default function Track(props) {
                 width="900"
                 height="200"
               />
-            </div>
+            </Link>
           )}
           <AudioPlayer
             url={track.trackUrl}
@@ -41,13 +41,15 @@ export default function Track(props) {
             id={track._id}
             onPlay={props.onPlay}
           />
+
           <div className={classes.songAndArtist}>
-            <div className={classes.titleAndDuration}>
+            <Link to={`/modal/${track._id}`} className={classes.link}>
               <h3 className={classes.title}>{track.title} </h3>
-              <p className={classes.duration}>{track.duration}</p>
-            </div>
-            <p>{track.artist}</p>
+            </Link>
+
+            <p className={classes.artist}>{track.artist}</p>
           </div>
+          <p className={classes.duration}>{track.duration}</p>
         </div>
         <div className={classes.trackClasses2}>
           <div className={classes.geners}>
@@ -69,21 +71,13 @@ export default function Track(props) {
             })}
           </div>
           <Emoji
+            title={track.title}
             id={track._id}
             className={classes.trackEmojis}
             trackIsLiked={track.isLiked}
           />
         </div>
       </div>
-      {props.isPlaying && (
-        <CurrentPlayedData
-          className={`${classes.CurrentPlayedAudio} ${
-            props.isPlaying ? "open" : ""
-          }`}
-          isPlaying={props.isPlaying}
-          trackAbout={track.trackAbout}
-        />
-      )}
     </div>
   );
 }

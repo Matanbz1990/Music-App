@@ -10,31 +10,21 @@
   color: white;
   box-shadow: 0 1px 5px rgb(50, 50, 50);
 
-  margin: 20px;
+  margin-right: 35px;
 }
 
 .outerTrackClass {
   width: 95%;
 }
 .isPlayingClass {
-  /* background-image: url("https://www.transparenttextures.com/patterns/argyle.png"); */
   background-color: #3a0808;
-  width: 100%;
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-}
-
-.trackEmojis {
-  /* flex: 3; */
 }
 
 .songAndArtist {
-  margin-top: auto;
   text-align: left;
+  width: 30%;
 }
-.songAndArtist h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+
 .titleAndDuration {
   display: flex;
   align-items: baseline;
@@ -61,12 +51,21 @@
   font-size: small;
   max-height: 5rem;
 }
+.link {
+  text-decoration: none;
+  color: aliceblue;
+  transition: all 0.5s ease;
+}
+.link:hover {
+  color: rgb(187, 206, 228);
+}
 
 .item {
   border: solid 1px;
   padding: 1px 3px;
   margin-top: 5px;
   margin-bottom: 1px;
+  transition: all 0.5s ease;
 }
 .item:hover {
   color: black;
@@ -74,10 +73,14 @@
   cursor: pointer;
 }
 .trackImg {
-  /* margin: 0; */
   margin-top: auto;
   width: 6rem;
   height: 6rem;
+}
+.trackImg:hover {
+  opacity: 20;
+
+  color: rgb(187, 206, 228);
 }
 img:hover {
 }
@@ -86,16 +89,25 @@ img:hover {
   transition: opacity 0.5s ease;
 }
 .trackClasses1 {
+  width: 80%;
   display: flex;
+  justify-content: space-around;
 }
 .trackClasses2 {
+  justify-content: space-around;
+  width: 80%;
+
   display: flex;
 }
 @media (max-width: 600px) {
   .trackDetailes {
     display: block;
     max-height: 12rem;
-    margin-left: 5px;
+    /* margin-left: 5px; */
+    /* width: 100%; */
+  }
+  .songAndArtist {
+    width: auto;
   }
   .duration {
     margin: auto;
@@ -108,6 +120,9 @@ img:hover {
   .titleAndDuration {
     display: block;
   }
+  .artist {
+    font-size: small;
+  }
   .trackImg {
     width: 4rem;
     height: 4rem;
@@ -116,14 +131,21 @@ img:hover {
   .trackClasses1 {
     display: flex;
     margin-bottom: 0;
+    width: 100%;
   }
   .trackClasses2 {
     display: flex;
-    margin-bottom: 0;
+    margin-left: 20px;
   }
 
-  .item {
+  .moods .item {
     font-size: x-small;
-    margin-top: 0;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
+  .geners .item {
+    font-size: x-small;
+    padding: 0 10px;
+    margin-left: 10px;
   }
 }

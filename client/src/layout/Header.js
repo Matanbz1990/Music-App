@@ -46,6 +46,9 @@ export default function Header() {
           <Link to="/about" className={classes.link}>
             <h3>About</h3>
           </Link>
+          <Link to="/posts" className={classes.link}>
+            <h3>Posts</h3>
+          </Link>
           <Link to="/contact" className={classes.link}>
             <h3>Contact</h3>
           </Link>

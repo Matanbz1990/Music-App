@@ -1,0 +1,11 @@
+.titleAndAuthor h3 {
+  text-align: center;
+}
+.post {
+}
+.content {
+  font-size: large;
+  width: 60%;
+  text-align: left;
+  margin: auto;
+}

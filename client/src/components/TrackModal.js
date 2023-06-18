@@ -78,7 +78,7 @@ export default function TrackModal() {
 
       <div className={classes.info}>
         <div>
-          <img style={divStyle} />
+          <img style={divStyle} alt="img" />
           <div className={classes.trackEmojis}>
             <Emoji id={track._id} trackIsLiked={track.isLiked} />
           </div>

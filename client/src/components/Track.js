@@ -3,6 +3,7 @@ import classes from "./Track.module.css";
 import Emoji from "./Emoji";
 import AudioPlayer from "./AudioPlayer";
 import { Link } from "react-router-dom";
+import loading from "../assets/images/loading.png";
 
 export default function Track(props) {
   const trackClasses = `${classes.trackDetailes} ${
@@ -17,6 +18,7 @@ export default function Track(props) {
     marginTop: "10px",
     // border: "solid black 1px",
   };
+
   return (
     <div style={imgBackground}>
       <div className={trackClasses}>
@@ -25,10 +27,11 @@ export default function Track(props) {
             <Link to={`/modal/${track._id}`} className={classes.link}>
               <img
                 alt="non"
-                src={track.imgUrl}
-                className={classes.trackImg}
-                width="900"
-                height="200"
+                data-src={track.imgUrl}
+                src={loading}
+                className="lazyload"
+                width="95px"
+                height="95px"
               />
             </Link>
           )}

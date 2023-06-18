@@ -1,5 +1,7 @@
 import classes from "./Contact.module.css";
 import SecondImg from "../assets/images/SecondImg.jpg";
+import loading from "../assets/images/loading.png";
+
 import {
   MailOutlined,
   LinkedinOutlined,
@@ -14,10 +16,11 @@ export default function About() {
       <div className={classes.contactText}>
         <img
           alt="profileImage"
-          src={SecondImg}
+          data-src={SecondImg}
           width="400"
+          src={loading}
           //   height="200"
-          cl
+          className="lazyload"
         />
         <div>
           <h2>

@@ -1,16 +1,26 @@
 import classes from "./About.module.css";
+import "lazysizes";
+
 // import axios from "axios";
 import img1 from "../assets/images/1222.jpg";
-import Acl11 from "../assets/images/Acl11.jpg";
+import Acl11 from "../assets/images/Acl11.png";
+import Acl3 from "../assets/images/Acl3.jpg";
 import img3 from "../assets/images/_0188.jpg";
 import Matan3 from "../assets/images/Matan3.JPG";
+import loading from "../assets/images/loading.png";
 
 export default function About() {
   return (
     <div>
       <h1>About Matan </h1>
       <div className={classes.aboutText}>
-        <img alt="img3" src={img3} height="400" cl className={classes.img1} />
+        <img
+          alt="img3"
+          data-src={img3}
+          height="400"
+          src={loading}
+          className="lazyload"
+        />
         <p className={classes.aboutTextP}>
           Matan Ben Zahav is a versatile musician, composer, and
           multi-instrumentalist hailing from Israel. With a passion for creating
@@ -42,20 +52,24 @@ export default function About() {
         </p>
         <img
           alt="img1"
-          src={img1}
+          data-src={img1}
+          src={loading}
+          effect="blur"
           width="500"
           height="300"
-          className={classes.img2}
+          className="lazyload"
         />
       </div>
       <div className={classes.aboutText}>
         <img
           alt="Acl11 "
-          src={Acl11}
+          data-src={Acl11}
+          src={loading}
+          effect="blur"
           width="700"
           height="500"
           cl
-          className={classes.img3}
+          className="lazyload"
         />
         <p>
           <h3>International Recognition:</h3> In 2019, Matan proudly represented
@@ -71,6 +85,41 @@ export default function About() {
       {/* <img alt="Acl11 " src={ACL3} width="900" height="500" cl /> */}
       <div className={classes.aboutText}>
         <p>
+          <h3> Musical educator:</h3>
+          Matan is not only an accomplished musician but also an experienced
+          music teacher. He served as the music coordinator in "Chavat HaNoar
+          Hazioni" high school in Jerusalem, where he shared his passion for
+          music with students. As an educator, Matan nurtured young talents and
+          inspired them to explore the world of music.
+          <h3> Media composer:</h3>
+          In addition to his teaching endeavors, Matan has made significant
+          contributions as a media composer. He has composed music for four
+          theatre shows performed by "Psifaso Theatre," an ultra-orthodox
+          women's theatre group in Jerusalem. His compositions added depth,
+          emotion, and richness to the theatrical productions, showcasing his
+          versatility and ability to create impactful musical experiences.
+        </p>
+        <img
+          alt="Acl3"
+          effect="blur"
+          data-src={Acl3}
+          src={loading}
+          width="600"
+          height="400"
+          className="lazyload"
+        />
+      </div>
+      <div className={classes.aboutText}>
+        <img
+          alt="img1"
+          effect="blur"
+          data-src={Matan3}
+          src={loading}
+          width="500"
+          height="300"
+          className="lazyload"
+        />
+        <p>
           <h3> Web Development Expertise:</h3>
           Beyond his musical talents, Matan is also a skilled web Full Stack
           developer. He has personally built this website and app, showcasing
@@ -78,13 +127,6 @@ export default function About() {
           ability to merge his musical creativity with technical expertise
           allows him to create innovative digital experiences for his audience.
         </p>
-        <img
-          alt="img1"
-          src={Matan3}
-          width="500"
-          height="300"
-          className={classes.img4}
-        />
       </div>
     </div>
   );

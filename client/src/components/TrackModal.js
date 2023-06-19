@@ -3,6 +3,9 @@ import { useState, useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import TracksContext from "../store/TracksContext";
 import { AudioContext } from "../store/AudioProvider";
+import loading from "../assets/images/loading.png";
+import "lazysizes";
+
 import Emoji from "./Emoji";
 
 import classes from "./TrackModal.module.css";
@@ -38,11 +41,7 @@ export default function TrackModal() {
     audioContext.pauseAudio();
   };
   const divStyle = {
-    backgroundImage: `url(${track.imgUrl})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
     marginTop: "20px",
-    height: "20em",
     width: "20rem",
     // Add any other desired background properties here
   };
@@ -78,7 +77,13 @@ export default function TrackModal() {
 
       <div className={classes.info}>
         <div>
-          <img style={divStyle} alt="img" />
+          <img
+            data-src={track.imgUrl}
+            src={loading}
+            style={divStyle}
+            alt="img"
+            className="lazyload"
+          />
           <div className={classes.trackEmojis}>
             <Emoji id={track._id} trackIsLiked={track.isLiked} />
           </div>

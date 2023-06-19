@@ -2,6 +2,10 @@ import React, { useContext } from "react";
 import classes from "./Post.module.css";
 import { useParams } from "react-router-dom";
 import { PostsContext } from "../store/PostsProvider";
+import { ArrowLeftOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
+import Pro from "../assets/images/Pro.png";
+import loading from "../assets/images/loading.png";
 
 export default function Post() {
   const { postId } = useParams();
@@ -13,12 +17,37 @@ export default function Post() {
     return <div>Loading...</div>;
   }
 
+  const paragraphs = post.content.split("\n\n");
+  const imgStyle = {
+    margin: "auto",
+    width: "20rem",
+  };
   return (
     <div>
-      <h1>{post.title}</h1>
-      <h3>{post.author}</h3>
-      <p className={classes.content}>{post.content}</p>
-      {/* Additional post details */}
+      <Link to={"/posts"} className={classes.link}>
+        <ArrowLeftOutlined />
+        Back to posts
+      </Link>
+
+      <div className={classes.titleAndAuthor}>
+        <h1>{post.title}</h1>
+        <h3>{post.author}</h3>
+      </div>
+      <article>
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className={classes.content}>
+            {paragraph}
+          </p>
+        ))}
+        <img
+          style={imgStyle}
+          alt="profileImage"
+          data-src={Pro}
+          width="400"
+          src={loading}
+          className="lazyload"
+        />
+      </article>
     </div>
   );
 }

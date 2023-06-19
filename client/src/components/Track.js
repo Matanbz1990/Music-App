@@ -4,6 +4,7 @@ import Emoji from "./Emoji";
 import AudioPlayer from "./AudioPlayer";
 import { Link } from "react-router-dom";
 import loading from "../assets/images/loading.png";
+import "lazysizes";
 
 export default function Track(props) {
   const trackClasses = `${classes.trackDetailes} ${
@@ -25,6 +26,7 @@ export default function Track(props) {
         <div className={classes.trackClasses1}>
           {track.imgUrl && (
             <Link to={`/modal/${track._id}`} className={classes.link}>
+              {/* <DoubleRightOutlined className={classes.arrow} /> */}
               <img
                 alt="non"
                 data-src={track.imgUrl}
@@ -52,7 +54,9 @@ export default function Track(props) {
 
             <p className={classes.artist}>{track.artist}</p>
           </div>
-          <p className={classes.duration}>{track.duration}</p>
+          <div>
+            <p className={classes.duration}>{track.duration}</p>
+          </div>
         </div>
         <div className={classes.trackClasses2}>
           <div className={classes.geners}>

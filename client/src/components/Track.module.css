@@ -55,6 +55,8 @@
   text-decoration: none;
   color: aliceblue;
   transition: all 0.5s ease;
+  display: flex;
+  align-content: center;
 }
 .link:hover {
   color: rgb(187, 206, 228);
@@ -88,6 +90,11 @@ img:hover {
   width: 80%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+.arrow {
+  font-size: large;
+  margin: auto;
 }
 .trackClasses2 {
   justify-content: space-around;

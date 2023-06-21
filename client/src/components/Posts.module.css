@@ -8,13 +8,15 @@
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
-  /* background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
-
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(3, 0, 0);
+  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
 .postsH2 {
   text-align: center;
+}
+p {
+  font-size: larger;
 }
 
 .link {
@@ -24,4 +26,19 @@
   transition: all 0.5s ease;
   font-size: larger;
   margin-left: 100px;
+}
+@media (max-width: 600px) {
+  .post {
+    width: 80%;
+  }
+
+  .post h2 {
+    font-size: large;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  .link h3 {
+    font-size: large;
+  }
 }

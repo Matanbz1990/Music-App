@@ -20,7 +20,9 @@ export default function Post() {
   const paragraphs = post.content.split("\n\n");
   const imgStyle = {
     margin: "auto",
-    width: "20rem",
+    width: "13rem",
+    borderRadius: "10px",
+    // marginBottom: "100px",
   };
   return (
     <div>
@@ -34,11 +36,6 @@ export default function Post() {
         <h3>{post.author}</h3>
       </div>
       <article>
-        {paragraphs.map((paragraph, index) => (
-          <p key={index} className={classes.content}>
-            {paragraph}
-          </p>
-        ))}
         <img
           style={imgStyle}
           alt="profileImage"
@@ -47,6 +44,11 @@ export default function Post() {
           src={loading}
           className="lazyload"
         />
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className={classes.content}>
+            {paragraph}
+          </p>
+        ))}
       </article>
     </div>
   );

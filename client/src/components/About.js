@@ -7,16 +7,16 @@ import Acl11 from "../assets/images/Acl11.png";
 import Acl3 from "../assets/images/Acl3.jpg";
 import img3 from "../assets/images/_0188.jpg";
 import Matan3 from "../assets/images/Matan3.JPG";
+import _2077 from "../assets/images/_2077.jpg";
 import loading from "../assets/images/loading.png";
-
 export default function About() {
   return (
     <div>
       <h1>About Matan </h1>
       <div className={classes.aboutText}>
         <img
-          alt="img3"
-          data-src={img3}
+          alt="_2077"
+          data-src={_2077}
           height="400"
           src={loading}
           className="lazyload"

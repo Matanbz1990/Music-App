@@ -50,7 +50,7 @@ export default function MusicContainer() {
     });
 
     setFilteredTracks(filtered);
-  }, [allTracks, filtersOptions, sortedTracks]);
+  }, [allTracks, filtersOptions]);
 
   return (
     <div className={classes.musicContainer1}>

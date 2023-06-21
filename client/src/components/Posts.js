@@ -15,13 +15,13 @@ export default function Posts() {
       </Link>
       <h1 className={classes.postsH2}>Music Posts</h1>
       {posts.map((post) => (
-        <div className={classes.post} key={post.id}>
-          <h2>"{post.title}"</h2>
+        <div className={classes.post} key={post.title}>
+          <h2>{post.title}</h2>
           <h4>by {post.author}</h4>
           <PostPreview
+            key={post.id}
             content={post.content}
             maxLength={200}
-            key={post.id}
             className={classes.preview}
           />
           <Link to={`/posts/${post._id}`} className={classes.link}>
@@ -42,5 +42,9 @@ const PostPreview = ({ content, maxLength }) => {
   // If the content is longer than the maximum length, truncate it and add an ellipsis
   const truncatedContent = content.slice(0, maxLength) + "...";
 
-  return <div>{truncatedContent}</div>;
+  return (
+    <div>
+      <p className={classes.postsP}>{truncatedContent}</p>
+    </div>
+  );
 };
